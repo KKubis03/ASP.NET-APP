@@ -110,7 +110,7 @@ dotnet build InternetApp.sln
 dotnet test InternetApp.sln
 ```
 
-At the time of writing, the solution has no test projects and the API project contains a stale project reference to `../../MobileApp/OzeSome.Data/OzeSome.Data.csproj`, which prevents a clean solution build until that reference is corrected.
+At the time of writing, the solution has no test projects and the API project contains a stale project reference to `../../MobileApp/OzeSome.Data/OzeSome.Data.csproj`, which prevents a clean solution build in the current repository snapshot. To restore solution builds locally, update that reference in `OzeSomeAPI/OzeSomeAPI.csproj` so it points to the checked-in data project at `../OzeSome.Data/OzeSome.Data.csproj`.
 
 ## Notes for development
 
